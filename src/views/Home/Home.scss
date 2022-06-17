@@ -1,0 +1,327 @@
+.divHome {
+    background: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+
+    .forms {
+        height: 95vh;
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0.9em;
+        background: #ffffff;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .headerFake {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Inter";
+        font-size: 30px;
+        color: #111111;
+    }
+
+    /*REQUIRED*/
+
+    .required {
+        font-family: "Nunito";
+        color: #767676;
+        font-size: 0.9em;
+    }
+
+    .required-phone {
+        font-family: "Nunito";
+        color: #767676;
+        font-size: 0.9em;
+    }
+
+    .required::after {
+        content: "*";
+    }
+}
+
+
+/*NAME*/
+
+
+
+.separation {
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    flex-basis: 45%;
+
+    .form-group-name {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+
+        #name {
+            border-radius: 0.5em;
+            border: 0.2em solid #AAAAAA;
+            padding: 0.3em;
+        }
+    }
+
+    /*E-MAIL*/
+
+    .form-group-email {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+
+        #email {
+            border-radius: 0.5em;
+            border: 0.2em solid #AAAAAA;
+            padding: 0.3em;
+        }
+    }
+
+
+
+    /*PHONE*/
+
+    .form-group-phone {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+
+        #phone {
+            border-radius: 0.5em;
+            border: 0.2em solid #AAAAAA;
+            padding: 0.3em;
+        }
+    }
+
+    /*Password*/
+    .form-group-password {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+    }
+
+    #password {
+        border-radius: 0.5em;
+        border: 0.2em solid #AAAAAA;
+        padding: 0.3em;
+    }
+
+    /*Birthday*/
+
+    .form-group-birthday {
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+
+    }
+
+    #birthday {
+        border-radius: 0.5em;
+        border: 0.2em solid #AAAAAA;
+        padding: 0.3em;
+        display: block;
+    }
+
+    /*SETA DATA*/
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        background: url(@/assets/seta.png);
+    }
+
+}
+
+/*Footer*/
+
+.fake-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 80%;
+    margin-top: 15%;
+
+
+
+
+    /*CheckBox*/
+    .container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        cursor: pointer;
+        font-family: "Nunito";
+        color: #111111;
+
+    }
+
+    .container input {
+        display: flex;
+        opacity: 0;
+        cursor: pointer;
+
+
+    }
+
+    .check {
+        width: 1vw;
+        height: 2vh;
+        background: #FFFFFF;
+        border: solid #0DBDBD 2px;
+    }
+
+    .container input:checked~.check {
+        background: #0DBDBD;
+        width: 100%;
+    }
+
+    .container .check::after {
+        height: 0.7em;
+    }
+
+    .check:after {
+        display: flex;
+        align-items: center;
+        content: "✓";
+        color: #ffffff;
+    }
+
+    .reverse {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    /*REGISTER*/
+    .btn-register {
+        display: flex;
+        background: #0DBDBD;
+        border-radius: 0.8em;
+        border-style: none;
+        padding: 0.9em;
+        font-family: "Nunito";
+        color: #FFFFFF;
+        cursor: pointer;
+
+    }
+
+    .btn-register:hover {
+        background: #15acac;
+        opacity: 2;
+    }
+}
+
+/*VALIDAÇÕES*/
+#validation-name,
+#validation-email,
+#validation-phone,
+#validation-password,
+#validation-birthday {
+    font-size: 0.8em;
+    color: red;
+}
+
+#main-check {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+#validation-checkbox {
+    display: flex;
+    font-size: 0.8em;
+    color: red;
+}
+
+/*MOBILE*/
+
+@media only screen and (max-width: 750px) {
+
+
+    .divHome {
+        display: flex;
+        background: #FFFFFF;
+        width: 100vw;
+        height: 100vh;
+
+        .forms {
+            width: 100%;
+        }
+    }
+
+
+    .separation .form-group-email {
+        width: 100%;
+    }
+
+    .separation .form-group-password {
+        width: 100%;
+    }
+
+    .separation .form-group-phone {
+        order: 1;
+        width: 45%;
+    }
+
+    .separation .form-group-birthday {
+        order: 1;
+        width: 45%;
+    }
+
+    /*FOOTER*/
+    .fake-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 13%;
+    }
+
+    /*CHECKBOX*/
+    .container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        width: 130%;
+        font-size: 0.95em;
+
+        .check {
+            width: 100%;
+            height: 100%;
+            padding: 2%;
+        }
+    }
+
+    
+
+    #main-check {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /*REGISTER*/
+    .register {
+        width: 100%;
+
+        .btn-register {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
