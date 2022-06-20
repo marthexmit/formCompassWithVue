@@ -1,8 +1,8 @@
 <template>
     <div class="divHome">
-        <form class="forms">
+        <form  id="form" class="forms">
             <div class="headerFake">
-                <img :src="require('@/assets/Logo.png')" :alt="logo" />
+                <img :src="require('@/assets/Logo.png')" />
             </div>
 
             <h1 class="title">Intern Sign Up</h1>
@@ -10,7 +10,7 @@
             <section class="separation">
                 <div class="form-group-name">
                     <label for="name" class="required">Full Name</label>
-                    <FooterComponent type="text" id="name" place="Name" />
+                    <FooterComponent type="text" id="name" classInput="input-name" place="Name" />
                     <div id="validation-name" style="display: none">Fullname invalid</div>
                 </div>
 
@@ -20,10 +20,10 @@
                     <FooterComponent type="email" id="email" class="input-email" place="foo@bar.com" />
                     <div id="validation-email" style="display: none">Email Invalid</div>
                 </div>
-                
+
                 <div class="form-group-phone">
                     <label for="phone" class="required-phone">Phone</label>
-                    <FooterComponent type="text" id="phone" class="input-phone" place="(83) 00000-0000"
+                    <FooterComponent type="text" v-mask="['(##) #####-####']" idSelect="phone" class="input-phone" place="(83) 00000-0000"
                         maxlength="15" />
                     <div id="validation-phone" style="display: none">
                         Phone Invalid
@@ -34,8 +34,7 @@
 
                 <div class="form-group-password">
                     <label for="password" class="required">Password</label>
-                    <FooterComponent type="password" id="password" class="input-password"
-                        place="Enter your password" />
+                    <FooterComponent type="password" id="password" class="input-password" place="Enter your password" />
                     <div id="validation-password" style="display: none">
                         Password Invalid
                     </div>
@@ -43,7 +42,7 @@
 
                 <div class="form-group-birthday">
                     <label for="birthday" class="required">Birthday</label>
-                    <FooterComponent type="date" id="birthday" class="input-birthday" />
+                    <FooterComponent type="date" id="birthday" class="input-birthday"/>
                     <div id="validation-birthday" style="display: none">
                         Age Invalid
                     </div>
@@ -67,24 +66,25 @@
                 </div>
 
                 <div class="register">
-                    <FooterComponent type="submit" value="Register" id="action-btn" class="btn-register" />
+                    <FooterComponent type="button" value="Register" id="action-btn" class="btn-register"/>
                 </div>
             </div>
-
-
         </form>
     </div>
 </template>
 
 <script>
 import FooterComponent from "@/components/footer/footer.vue";
+import {mask} from 'vue-the-mask';
 
 export default {
+    directives: {mask},
     name: "HomePage",
     components: {
         FooterComponent,
     },
-};
+    
+}
 </script>
 
 <style lang="sass" scoped>

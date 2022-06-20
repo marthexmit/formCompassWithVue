@@ -51,13 +51,9 @@
     }
 }
 
-
 /*NAME*/
 
-
-
 .separation {
-
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -70,10 +66,9 @@
         flex-direction: column;
         width: 100%;
 
-
         #name {
             border-radius: 0.5em;
-            border: 0.2em solid #AAAAAA;
+            border: 0.2em solid #aaaaaa;
             padding: 0.3em;
         }
     }
@@ -87,12 +82,10 @@
 
         #email {
             border-radius: 0.5em;
-            border: 0.2em solid #AAAAAA;
+            border: 0.2em solid #aaaaaa;
             padding: 0.3em;
         }
     }
-
-
 
     /*PHONE*/
 
@@ -103,7 +96,7 @@
 
         #phone {
             border-radius: 0.5em;
-            border: 0.2em solid #AAAAAA;
+            border: 0.2em solid #aaaaaa;
             padding: 0.3em;
         }
     }
@@ -117,7 +110,7 @@
 
     #password {
         border-radius: 0.5em;
-        border: 0.2em solid #AAAAAA;
+        border: 0.2em solid #aaaaaa;
         padding: 0.3em;
     }
 
@@ -127,12 +120,11 @@
         display: flex;
         flex-direction: column;
         width: 35%;
-
     }
 
     #birthday {
         border-radius: 0.5em;
-        border: 0.2em solid #AAAAAA;
+        border: 0.2em solid #aaaaaa;
         padding: 0.3em;
         display: block;
     }
@@ -141,7 +133,6 @@
     input[type="date"]::-webkit-calendar-picker-indicator {
         background: url(@/assets/seta.png);
     }
-
 }
 
 /*Footer*/
@@ -153,9 +144,6 @@
     width: 80%;
     margin-top: 15%;
 
-
-
-
     /*CheckBox*/
     .container {
         display: flex;
@@ -164,31 +152,28 @@
         cursor: pointer;
         font-family: "Nunito";
         color: #111111;
-
     }
 
     .container input {
         display: flex;
         opacity: 0;
         cursor: pointer;
-
-
     }
 
     .check {
         width: 1vw;
         height: 2vh;
-        background: #FFFFFF;
-        border: solid #0DBDBD 2px;
+        background: #ffffff;
+        border: solid #0dbdbd 2px;
     }
 
-    .container input:checked~.check {
-        background: #0DBDBD;
+    .container input:checked ~ .check {
+        background: #0dbdbd;
         width: 100%;
     }
 
     .container .check::after {
-        height: 0.7em;
+        height: 0.8em;
     }
 
     .check:after {
@@ -206,14 +191,13 @@
     /*REGISTER*/
     .btn-register {
         display: flex;
-        background: #0DBDBD;
+        background: #0dbdbd;
         border-radius: 0.8em;
         border-style: none;
         padding: 0.9em;
         font-family: "Nunito";
-        color: #FFFFFF;
+        color: #ffffff;
         cursor: pointer;
-
     }
 
     .btn-register:hover {
@@ -237,7 +221,6 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-
 }
 
 #validation-checkbox {
@@ -250,10 +233,13 @@
 
 @media only screen and (max-width: 750px) {
 
-
+    * {
+        margin: 0;
+        padding: 0;
+    }
     .divHome {
         display: flex;
-        background: #FFFFFF;
+        background: #ffffff;
         width: 100vw;
         height: 100vh;
 
@@ -261,7 +247,6 @@
             width: 100%;
         }
     }
-
 
     .separation .form-group-email {
         width: 100%;
@@ -299,12 +284,8 @@
 
         .check {
             width: 100%;
-            height: 100%;
-            padding: 2%;
         }
     }
-
-    
 
     #main-check {
         display: flex;
@@ -312,7 +293,7 @@
         align-items: center;
         justify-content: center;
     }
-    
+
     /*REGISTER*/
     .register {
         width: 100%;
